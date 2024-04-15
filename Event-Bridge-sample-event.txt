@@ -1,0 +1,105 @@
+{
+  "version": "0",
+  "id": "b65a2ba6-cc87-b85b-9739-d00c4d35b27a",
+  "detail-type": "Security Hub Findings - Imported",
+  "source": "aws.securityhub",
+  "account": "123456789101",
+  "time": "2024-03-05T22:32:17Z",
+  "region": "us-east-1",
+  "resources": [
+    "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:123456789101:subscription/cis-aws-foundations-benchmark/v/1.4.0/2.1.5.2/finding/b6c18cec-8f6e-4d7a-8b31-83440fe42688"
+  ],
+  "detail": {
+    "findings": [
+      {
+        "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+        "Types": [
+          "Software and Configuration Checks/Industry and Regulatory Standards/CIS AWS Foundations Benchmark"
+        ],
+        "Description": "This control checks if Amazon S3 buckets have bucket level public access blocks applied. This control fails if any of the bucket level settings are set to \"false\" public: ignorePublicAcls, blockPublicPolicy, blockPublicAcls, restrictPublicBuckets.",
+        "Compliance": {
+          "Status": "FAILED",
+          "SecurityControlId": "S3.8",
+          "RelatedRequirements": [
+            "CIS AWS Foundations Benchmark v1.4.0/2.1.5"
+          ],
+          "AssociatedStandards": [
+            {
+              "StandardsId": "standards/cis-aws-foundations-benchmark/v/1.4.0"
+            }
+          ]
+        },
+        "ProductName": "Security Hub",
+        "FirstObservedAt": "2024-03-05T22:32:00.257Z",
+        "CreatedAt": "2024-03-05T22:32:00.257Z",
+        "LastObservedAt": "2024-03-05T22:32:08.498Z",
+        "CompanyName": "AWS",
+        "FindingProviderFields": {
+          "Types": [
+            "Software and Configuration Checks/Industry and Regulatory Standards/CIS AWS Foundations Benchmark"
+          ],
+          "Severity": {
+            "Normalized": 70,
+            "Label": "HIGH",
+            "Product": 70,
+            "Original": "HIGH"
+          }
+        },
+        "ProductFields": {
+          "StandardsArn": "arn:aws:securityhub:::standards/cis-aws-foundations-benchmark/v/1.4.0",
+          "StandardsSubscriptionArn": "arn:aws:securityhub:us-east-1:123456789101:subscription/cis-aws-foundations-benchmark/v/1.4.0",
+          "ControlId": "2.1.5.2",
+          "RecommendationUrl": "https://docs.aws.amazon.com/console/securityhub/S3.8/remediation",
+          "RelatedAWSResources:0/name": "securityhub-s3-bucket-level-public-access-prohibited-34a03d42",
+          "RelatedAWSResources:0/type": "AWS::Config::ConfigRule",
+          "StandardsControlArn": "arn:aws:securityhub:us-east-1:123456789101:control/cis-aws-foundations-benchmark/v/1.4.0/2.1.5.2",
+          "aws/securityhub/ProductName": "Security Hub",
+          "aws/securityhub/CompanyName": "AWS",
+          "aws/securityhub/annotation": "PublicAccessBlockConfigurations are incorrect for block_public_acls: False ignore_public_acls: False block_public_policy: False restrict_public_buckets False",
+          "Resources:0/Id": "arn:aws:s3:::testpublicbucket",
+          "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:123456789101:subscription/cis-aws-foundations-benchmark/v/1.4.0/2.1.5.2/finding/b6c18cec-8f6e-4d7a-8b31-83440fe42688"
+        },
+        "Remediation": {
+          "Recommendation": {
+            "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+            "Url": "https://docs.aws.amazon.com/console/securityhub/S3.8/remediation"
+          }
+        },
+        "SchemaVersion": "2018-10-08",
+        "GeneratorId": "cis-aws-foundations-benchmark/v/1.4.0/2.1.5.2",
+        "RecordState": "ACTIVE",
+        "Title": "2.1.5.2 S3 Block Public Access setting should be enabled at the bucket-level",
+        "Workflow": {
+          "Status": "NEW"
+        },
+        "Severity": {
+          "Normalized": 70,
+          "Label": "HIGH",
+          "Product": 70,
+          "Original": "HIGH"
+        },
+        "UpdatedAt": "2024-03-05T22:32:00.257Z",
+        "WorkflowState": "NEW",
+        "AwsAccountId": "123456789101",
+        "Region": "us-east-1",
+        "Id": "arn:aws:securityhub:us-east-1:123456789101:subscription/cis-aws-foundations-benchmark/v/1.4.0/2.1.5.2/finding/b6c18cec-8f6e-4d7a-8b31-83440fe42688",
+        "Resources": [
+          {
+            "Partition": "aws",
+            "Type": "AwsS3Bucket",
+            "Details": {
+              "AwsS3Bucket": {
+                "OwnerId": "fe8199b02fb3862a20659911bd46183d4a230dc6fd4a1c031bf4dadb5d9fc94e",
+                "CreatedAt": "2024-02-29T16:43:06.000Z",
+                "Name": "testpublicbucket"
+              }
+            },
+            "Region": "us-east-1",
+            "Id": "arn:aws:s3:::testpublicbucket"
+          }
+        ],
+        "ProcessedAt": "2024-03-05T22:32:13.783Z"
+      }
+    ]
+  }
+}
