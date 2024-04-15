@@ -6,6 +6,8 @@ Storage solutions like Amazon Simple Storage Service (Amazon S3) can be used for
 
 In this post, we will walk you through a proactive approach to detect public S3 buckets and automatically block all public access. This solution is built on event driven architecture which is cost effective and easy to deploy.
 
+For detailed implementation steps, refer our blog @ 
+
 ## Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
